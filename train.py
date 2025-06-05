@@ -45,6 +45,11 @@ f1 = f1_score(y_test, predictions, average="macro")
 
 print("Accuracy:", str(round(accuracy, 2) * 100) + "%", "F1:", round(f1, 2))
 
+import os
+
+# Ensure the directory exists
+os.makedirs("Results", exist_ok=True)
+
 with open("Results/metrics.txt", "w") as outfile:
     outfile.write(f"\nAccuracy = {accuracy.round(2)}, F1 Score = {f1.round(2)}.")
 
