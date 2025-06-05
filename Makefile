@@ -20,5 +20,8 @@ eval:
 update-branch:
 	git config --global user.name $(USER_NAME)
 	git config --global user.email $(USER_EMAIL)
+	git add Model/drug_pipeline.skops
+	git add Results/model_results.png
+	git add Results/metrics.txt
 	git commit -am "Update with new results"
 	git push --force origin HEAD:update
