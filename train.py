@@ -19,8 +19,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
-cat_col = [1,2,3]
-num_col = [0,4]
+cat_col = [1, 2, 3]
+num_col = [0, 4]
 
 transform = ColumnTransformer(
     [
@@ -62,6 +62,7 @@ disp.plot()
 plt.savefig("Results/model_results.png", dpi=120)
 
 import skops.io as sio
+
 os.makedirs("Model", exist_ok=True)
 
 sio.dump(pipe, "Model/drug_pipeline.skops")
