@@ -51,7 +51,7 @@ import os
 os.makedirs("Results", exist_ok=True)
 
 with open("Results/metrics.txt", "w") as outfile:
-    outfile.write(f"\nAccuracy = {accuracy.round(2)}, F1 Score = {f1.round(2)}.")
+    outfile.write(f"\nAccuracy = {round(accuracy, 2)}, F1 Score = {round(f1, 2)}.")
 
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
